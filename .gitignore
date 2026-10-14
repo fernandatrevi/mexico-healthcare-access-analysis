@@ -1,0 +1,12 @@
+# R session files
+.Rhistory
+.RData
+.Ruserdata
+
+# Local configuration and temporary files
+.Rproj.user/
+.DS_Store
+*.log
+
+# Downloaded source data
+data/raw/
