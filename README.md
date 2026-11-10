@@ -4,7 +4,9 @@
 
 [**Explore the interactive dashboard source**](app.R) · [**Download the processed datasets**](data/processed) · [**View the analysis workflow**](run_analysis.R)
 
-**Dashboard status:** Successfully launched locally in RStudio on November 10, 2026. **Public shinyapps.io deployment is still pending.** The localhost URL (`127.0.0.1`) is accessible only on the developer's computer; a shareable live link will be added after deployment.
+**[Open the Shiny dashboard](https://fernandatrevi.shinyapps.io/mexico-healthcare-access/)** · [Dashboard source code](app.R)
+
+**Deployment note:** The application was launched successfully in RStudio and uploaded to shinyapps.io on November 10, 2026. The public app URL above is configured, but its successful startup has **not yet been independently verified**. If it does not load, check the application's deployment status and logs in shinyapps.io.
 
 ### Interactive dashboard
 
