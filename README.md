@@ -61,6 +61,35 @@ The range describes the distance between the two extremes. The interquartile ran
 
 All findings are descriptive. Statistical significance and causes have not been established. Calculations use unrounded values; displayed results are rounded.
 
+
+## Interactive dashboard — R Shiny
+
+A separate **[interactive Shiny application](app.R)** is now included in the same repository. It uses the already validated CSV outputs under `data/processed/`, so it does **not** rerun the original Excel extraction or alter the statistical analysis.
+
+**Interactive features**
+
+- Select a reference year: 2016, 2018, 2020, 2022 or 2024.
+- Switch the state ranking between deprivation percentages and estimated affected population.
+- Compare selected states across the five reference years.
+- Toggle the official national benchmark for rate-based comparisons.
+- Explore a rate-versus-affected-population scatterplot.
+- Inspect the state table and export a CSV for the selected year.
+
+### Run the dashboard locally
+
+From the repository root in R or RStudio, install the two dashboard dependencies:
+
+```r
+install.packages(c("shiny", "plotly"), repos = "https://cloud.r-project.org")
+shiny::runApp(".")
+```
+
+Alternatively, run `Rscript -e 'shiny::runApp(".")'` from the repository root. The app reads `data/processed/healthcare_states_with_counts.csv` and `data/processed/healthcare_national.csv`, which are committed to this repository. You do not need the excluded Excel workbook just to explore the dashboard.
+
+**Public deployment:** Not yet configured or verified. GitHub stores the app code but does not execute Shiny applications. Publishing the app online requires a Shiny-capable hosting service such as [shinyapps.io](https://www.shinyapps.io/), along with deployment and testing.
+
+**Analytical limitations:** The dashboard presents descriptive point estimates only. It does not add confidence intervals, establish statistical significance, confirm year-to-year methodological comparability, or imply that connected reference-year observations were measured annually. Rates and counts should not be conflated.
+
 ## Visualizations
 
 ### National trends
