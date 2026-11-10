@@ -132,7 +132,7 @@ server <- function(input, output, session) {
     d <- year_data()
     metric <- input$measure
     label <- if (metric == "healthcare_deprivation_pct") "Deprivation rate (%)" else "People affected (millions)"
-    p <- plot_ly(d, x = ~reorder(state, -d[[metric]]), y = d[[metric]],
+    p <- plot_ly(d, x = factor(d$state, levels = d$state), y = d[[metric]],
                  type = "bar", marker = list(color = "#247d9a"),
                  text = paste0(d$state, "<br>Rate: ", fmt(d$healthcare_deprivation_pct),
                                "%<br>Affected: ", fmt(d$people_millions), " million"),
