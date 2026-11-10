@@ -1,5 +1,15 @@
-# mexico-healthcare-access-analysis
 # Mexico Healthcare Access Analysis
+
+**R · Shiny · Plotly · Public Health Analytics · INEGI**
+
+[**Explore the interactive dashboard source**](app.R) · [**Download the processed datasets**](data/processed) · [**View the analysis workflow**](run_analysis.R)
+
+**Dashboard status:** Successfully launched locally in RStudio on November 10, 2026. **Public shinyapps.io deployment is still pending.** The localhost URL (`127.0.0.1`) is accessible only on the developer's computer; a shareable live link will be added after deployment.
+
+### Interactive dashboard
+
+Explore all 32 Mexican states across 2016, 2018, 2020, 2022 and 2024. Filter by year, compare the deprivation rate with the number of affected people, select states for trend comparisons, display the official national benchmark, and download a filtered CSV. **Run locally:** `shiny::runApp(".")` after installing Shiny and Plotly.
+
 
 An exploratory analysis of healthcare access deprivation across Mexico’s 32 states between 2016 and 2024, using official INEGI data.
 
